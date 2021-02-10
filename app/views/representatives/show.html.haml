@@ -1,0 +1,31 @@
+%h1 Details about Representative
+%link{ rel: 'stylesheet', href: 'http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css' }
+
+%ul#details
+- @representatives.each do |rep|
+    %img{ src: rep.photo, width: '20%', height: '20%',
+    alt: 'Picture', align: 'center' }
+
+    = link_to representative_news_items_path(rep.id), class: 'btn btn-default' do
+        %i.fas.fa-newspaper
+        News Articles
+
+    %li
+        Name:
+        = rep.name
+
+    %li
+        Office:
+        = rep.title
+
+    %li
+        Party:
+        = rep.party
+
+    %li
+        Address:
+        = rep.street + ' ' + rep.city + ', ' + rep.state + ' ' + rep.zip
+
+    %li
+        Phones:
+        = rep.phones

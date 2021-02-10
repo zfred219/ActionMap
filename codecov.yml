@@ -1,0 +1,7 @@
+codecov:
+  token: "0fc9ac1f-b2ec-4686-a645-8fe1a734c546"
+  bot: "codecov-io"
+  ci:
+    - "travis.org"
+  max_report_age: 24
+  require_ci_to_pass: yes
